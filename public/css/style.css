@@ -34,6 +34,7 @@
     font-weight: 700;
     background-color: #27AE60;
     border-radius: 8px;
+    margin-left: 334px;
 }
 
 .teclado{
@@ -91,4 +92,19 @@ input{
 
 button:hover{
     cursor: pointer;
+}
+
+.palavraEscolhida{
+    margin-top: 370px;
+    margin-left: 150px;
+}
+
+.jogoEsquerda{
+    width: 400px;
+    height: 467px;
+}
+
+.jogoDireita{
+    width: 587px;
+    height: 467px;
 }
