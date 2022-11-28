@@ -1,18 +1,20 @@
-export default function Jogo() {
+export default function Jogo(props) {
+
+    
     return (
 
         <div className="jogo">
 
             <div className="jogoEsquerda">
 
-                <img className="forca" src="assets/forca0.png" />
+                <img data-test="game-image" className="forca" src={`assets/forca${props.quantErros}.png`} />
 
             </div>
 
             <div className="jogoDireita">
 
-                <button className="escolher">Escolher Palavra</button>
-                <div className="palavraEscolhida">________</div>
+                <button data-test="choose-word" onClick={props.functEscolherPalavra} disabled={props.inicio} className="escolher">Escolher Palavra</button>
+                <div data-test="word" data-answer={props.palavraVez} className={`palavraEscolhida ${props.status}`}>{props.aparencia}</div>
 
             </div>
 
@@ -20,3 +22,4 @@ export default function Jogo() {
         </div>
     )
 }
+
